@@ -3,6 +3,9 @@
      text-align: center;
      color: white;
 }
+.containerBody{
+background-color: khaki;
+}
 .searchRow {  
      color: gray;
      margin-left: 12px;
@@ -23,7 +26,9 @@
 .card{
      height: 100%;
      border: 1px solid gray;
+     padding: 10px;
+     margin-left: auto;
 }
 .row{
      width: 100%;
-}
+} 

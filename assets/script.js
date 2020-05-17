@@ -68,6 +68,7 @@ function cities(){
 }
 cities
 
-// document.getElementById("#searches"){
-
-// }
+// $("#searches").click(function cities (){
+//   $("#seaches").append("<b>placeHolders</b>")
+//   console.log(cities)
+// })
