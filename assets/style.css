@@ -2,14 +2,15 @@
      background-color: gray;
      text-align: center;
      color: white;
+     /* position: fixed; */
+     width: 100%;
 }
-.containerBody{
+/* .containerBody{
 background-color: wheat;
-}
+} */
 .searchRow {  
      color: gray;
      margin-left: 12px;
-     /* padding: 10px; */
 }
 #citySearch{
      margin-left: 12px;
@@ -30,5 +31,9 @@ background-color: wheat;
      margin-left: auto;
 }
 .row{
+     /* background-color: wheat; */
      width: 100%;
 } 
+.list{
+     border: 1px solid black;
+}

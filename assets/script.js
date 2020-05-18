@@ -1,6 +1,6 @@
  // This is our API key for Open weather
  var APIKey = "cb0aff65346ac00102a9d531dc96584f";
-
+ var storedCities = JSON.parse(localStorage.getItem("searches"))||[]
  // Declaring the city 
  var city = $("city").val();
  $(document).ready(function() {
@@ -9,10 +9,10 @@
     console.log(searchItem)
     updatedWeather(searchItem)
     fiveDayForecast(searchItem)  
-    if (!cities.includes(searchItem)){
-      cities.push(searchItem)
+    if (!storedCities.includes(searchItem)){
+      storedCities.push(searchItem)
     }
-    localStorage.setItem('searches', JSON.stringify(cities))
+    localStorage.setItem('searches', JSON.stringify(storedCities))
    })
  })
 
@@ -24,8 +24,8 @@
     .then(function(response) {
      
      console.log(response)
-     $("#curWeather").append(searchItem)
-     $("#weatherData").prepend("<p> Current Weather:" + response.main.temp +"</p>"
+     $("#curWeather").html(searchItem)
+     $("#weatherData").html("<p> Current Weather:" + response.main.temp +"</p>"
      +"<p>Description: "+response.weather[0].description+"</p>"+
      "<img src='https://openweathermap.org/img/wn/"+response.weather[0].icon+".png'"+
      "<p>wind speed:"+ response.wind.speed+"</p>")
@@ -38,6 +38,7 @@
     url: queryURL,
     method: "GET"})
     .then(function(response) {
+      $(".foreCast").empty()
      console.log(response)
      for(let i = 0; i< response.list.length; i = i+8){
        
@@ -56,19 +57,20 @@
     method: "GET"})
     .then(function(response) {
      console.log(response)
-     $(".uv").append("UV INDEX:"+response.value)
+     $(".uv").html("UV INDEX:"+response.value)
 
  })
 }
-
-var cities =[];
 function cities(){
-  var storedCities = JSON.parse(localStorage.getItem("searches"))
-  cities = storedCities
+  storedCities = JSON.parse(localStorage.getItem("searches"))||[]
+  for (var i=0; i<storedCities.length; i++){
+    $("#searches").append("<p class='placeholder'>"+storedCities[i]+"</p>")
+  }
 }
-cities
-
-// $("#searches").click(function cities (){
-//   $("#seaches").append("<b>placeHolders</b>")
-//   console.log(cities)
-// })
+cities()
+$("#searches").on("click",".placeholder", function (){
+  var searchItem = $(this).text()
+  console.log(searchItem)
+  updatedWeather(searchItem)
+  fiveDayForecast(searchItem)
+})
