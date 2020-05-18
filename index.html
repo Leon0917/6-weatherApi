@@ -15,59 +15,41 @@
         <h1 class="header">Weather Dashboard</h1>
     </div>
     <!--Create container here-->
-    <div class="container-fluid containerBody">
+    <div class="container">
         <div class="row">
-            <div class="col col-md-4">
+            <div class="col-md-4">
                 <h3 class="searchRow">Search for a City:</h3>
-                <div class="row infoArea">
+                <div class="row">
                     <input type="text" name="city" id="citySearch" class="form-contol" placeholder="City name">
-                    <button id="weatherSubmit" class="btn btn-primary"><svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"/>
-                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"/>
-                      </svg></button>
+                    <button id="weatherSubmit" class="btn btn-primary"><svg class="bi bi-search" width="1em"
+                            height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
+                                clip-rule="evenodd" />
+                            <path fill-rule="evenodd"
+                                d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
+                                clip-rule="evenodd" />
+                        </svg></button>
                 </div>
                 <br>
-                <div id="searches"> </div> 
-                <!-- <div class="row" id="row2">
-                    <input type="text" name="" class="form-contol placeHolders" id="input3" placeholder="">
-                </div>
-                <div class="row" id="row3">
-                    <input type="text" name="" class="form-contol placeHolders" id="input4" placeholder="">
-                </div>
-                <div class="row" id="row4">
-                    <input type="text" name="" class="form-contol placeHolders" id="input5" placeholder="">
-                </div>
-                <div class="row" id="row5">
-                    <input type="text" name="" class="form-contol placeHolders" id="input6" placeholder="">
-                </div>
-                <div class="row" id="row7">
-                    <input type="text" name="" class="form-contol placeHolders" id="input7" placeholder="">
-                </div>
-                <div class="row" id="row8">
-                    <input type="text" name="" class="form-contol placeHolders" id="input8" placeholder="">
-                </div>
-                <div class="row" id="row9">
-                    <input type="text" name="" class="form-contol placeHolders" id="input9" placeholder="">
-                </div>
-                <div class="row" id="row10">
-                    <input type="text" name="" class="form-contol placeHolders" id="input10" placeholder="">
-                </div> -->
+                <div id="searches"></div>
             </div>
-                <div class="col col-md-8 wrapper" id="rightSide">
-                    <div class="card cardTop" style="width: 46rem;">
-                        <div class="card-body">
-                            <h5 class="card-title" id="curWeather"></h5>
-                            <div id="weatherData" class="card-text">
-                               
-                            </div> 
-                            <h6 class="uv"></h6>
-                            <div class="forecast card-body">
-                                <h5 class="" id="images">
-                                </h5>
-                            </div>
+            <div class="col-md-8" id="rightSide">
+                <div class="card" style="width: 46rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="curWeather"></h5>
+                        <div id="weatherData" class="card-text">
+
                         </div>
+                        <h6 class="uv"></h6>
+                    
+                    <div class="forecast card-body">
+                        <h5 class="" id="images">
+                        </h5>
                     </div>
                 </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js"

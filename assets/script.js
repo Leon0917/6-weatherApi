@@ -1,8 +1,8 @@
- // This is our API key for Open weather
+ // Declaring global variables
  var APIKey = "cb0aff65346ac00102a9d531dc96584f";
  var storedCities = JSON.parse(localStorage.getItem("searches"))||[]
- // Declaring the city 
  var city = $("city").val();
+
  $(document).ready(function() {
    $("#weatherSubmit").on("click", function() {
     var searchItem = $('#citySearch').val();
