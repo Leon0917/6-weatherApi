@@ -14,11 +14,10 @@
 }
 .searchRow {  
      color: gray;
-     margin-left: 12px;
 }
 .card{
      height: 100%;
-     border: 1px solid gray;
+     border: 1px solid black;
      padding: 10px;
      margin-left: auto;
 }
